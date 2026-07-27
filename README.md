@@ -173,11 +173,18 @@ pip install -r requirements.txt
 
 ### 4. Calistir
 
+**Tarayici modu** (localhost):
 ```bash
 python -m src.main
 ```
-
 Tarayicida `http://localhost:8000/chat` adresine gidin.
+
+**Masaustu uygulamasi modu** (yerel pencere, tarayici gerekmez):
+```bash
+python -m src.desktop
+```
+Uygulama ayri bir pencerede acilir (Windows'ta Edge WebView2 kullanir).
+Windows'ta ayrica `Uygulamayi Baslat.bat` dosyasina cift tiklayabilirsiniz.
 
 ## Ayarlar
 
@@ -228,7 +235,8 @@ local-ai-assistant/
 ├── data/
 │   └── chat_history.db      # SQLite veritabani (otomatik olusur)
 ├── src/
-│   ├── main.py               # Ana uygulama
+│   ├── main.py               # Ana uygulama (tarayici modu)
+│   ├── desktop.py            # Masaustu uygulamasi (yerel pencere)
 │   ├── config/
 │   │   └── settings.py       # Pydantic ayar modelleri
 │   ├── core/

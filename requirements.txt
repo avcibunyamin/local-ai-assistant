@@ -27,3 +27,6 @@ pyttsx3==2.98
 
 # Bilgisayar Kontrolu (fare, klavye, ekran)
 pyautogui==0.9.54
+
+# Masaustu Uygulamasi (yerel pencere - Windows'ta Edge WebView2 kullanir)
+pywebview==6.2.1
