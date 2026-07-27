@@ -143,7 +143,16 @@ class BenimAracim(Tool):
 
 ## Kurulum
 
-### 1. Ollama Kur
+### 1. Projeyi Klonla
+
+```bash
+git clone https://github.com/bunyaminavc/local-ai-assistant.git
+cd local-ai-assistant
+```
+
+> Depo gizli (private) ise klonlamak icin GitHub hesabinizda erisim yetkisi olmali.
+
+### 2. Ollama Kur
 
 [ollama.com](https://ollama.com) adresinden Ollama'yi indirip kurun.
 
@@ -152,7 +161,7 @@ Bir model indirin:
 ollama pull qwen2.5:7b
 ```
 
-### 2. Python Bagimliliklar
+### 3. Python Bagimliliklar
 
 ```bash
 python -m venv venv
@@ -162,7 +171,7 @@ venv\Scripts\activate        # Windows
 pip install -r requirements.txt
 ```
 
-### 3. Calistir
+### 4. Calistir
 
 ```bash
 python -m src.main
