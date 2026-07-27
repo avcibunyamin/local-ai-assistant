@@ -1,0 +1,29 @@
+# Web Framework
+fastapi==0.115.12
+uvicorn[standard]==0.34.2
+
+# UI
+gradio==5.33.0
+
+# HTTP Client (async Ollama iletisimi)
+httpx==0.28.1
+
+# Configuration
+pyyaml==6.0.2
+pydantic==2.11.3
+pydantic-settings==2.9.1
+
+# RAG - Belge Isleme
+pymupdf==1.25.5
+python-docx==1.1.2
+openpyxl==3.1.5
+
+# RAG - Vektor Veritabani (FAISS - onceden derlenmis, C++ derleme gerektirmez)
+faiss-cpu==1.11.0
+
+# Ses - STT (konusma tanima) ve TTS (sesli yanit)
+faster-whisper==1.1.1
+pyttsx3==2.98
+
+# Bilgisayar Kontrolu (fare, klavye, ekran)
+pyautogui==0.9.54

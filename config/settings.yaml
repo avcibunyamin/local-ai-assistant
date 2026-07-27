@@ -1,0 +1,89 @@
+# ======================================
+# Local AI Assistant - Ayarlar
+# ======================================
+
+# LLM Ayarlari
+llm:
+  # Ollama API adresi
+  base_url: "http://localhost:11434"
+  # Kullanilacak model (ollama list ile gorebilirsiniz)
+  model: "qwen2.5:7b"
+  # Yaraticilik seviyesi (0.0 = deterministik, 1.0 = yaratici)
+  temperature: 0.7
+  # Maksimum token sayisi
+  max_tokens: 4096
+  # Sistem promptu
+  system_prompt: "Sen yardimci bir AI asistanisin. SADECE Turkce yaz. Cevaplarinda Cince, Ingilizce veya baska bir dilden kelime ya da karakter KULLANMA; teknik terimler haric her sey Turkce olsun."
+
+# Sunucu Ayarlari
+server:
+  host: "0.0.0.0"
+  port: 8000
+
+# UI Ayarlari
+ui:
+  title: "Local AI Assistant"
+  theme: "soft"
+  share: false
+
+# Chat Gecmisi Ayarlari
+chat:
+  # Veritabani dosya yolu (proje kokune gore)
+  db_path: "data/chat_history.db"
+  # Maksimum saklanacak konusma sayisi
+  max_conversations: 100
+
+# RAG (Belge Tabanli Cevaplama) Ayarlari
+rag:
+  # Embedding modeli (ollama pull ile indirin)
+  embedding_model: "nomic-embed-text"
+  # Embedding vektor boyutu (nomic-embed-text icin 768)
+  embedding_dimension: 768
+  # Vektor deposu dizini
+  store_dir: "data/vector_store"
+  # Metin parca boyutu (karakter)
+  chunk_size: 1000
+  # Parcalar arasi ortusme (karakter)
+  chunk_overlap: 200
+  # Sorgu basina getirilecek ilgili parca sayisi
+  top_k: 4
+
+# Hafiza Sistemi Ayarlari
+memory:
+  # Hafiza veritabani yolu
+  db_path: "data/memory.db"
+  # Otomatik gercek cikarimi (her konusmadan hafiza olustur)
+  auto_extract: true
+  # Soru basina geri cagrilacak hafiza sayisi
+  recall_top_k: 5
+  # Minimum benzerlik esigi (0-1 arasi)
+  recall_min_score: 0.5
+
+# Arac (Tool Calling) Ayarlari
+tools:
+  # Araclarin calisabilecegi guvenli dizin
+  workspace_dir: "data/workspace"
+  # Tehlikeli araclar (shell, python) etkin mi - DIKKAT: guvenlik riski
+  allow_dangerous: true
+  # Bir tool-calling dongusunde maksimum tur
+  max_iterations: 5
+  # Komut zaman asimi (saniye)
+  exec_timeout: 30
+
+# Vision (Goruntu Analizi) Ayarlari
+vision:
+  # Multimodal model (ollama pull qwen2.5vl:7b)
+  model: "qwen2.5vl:7b"
+  # Varsayilan analiz talimati
+  default_prompt: "Bu goruntude ne goruyorsun? Detayli acikla."
+
+# Ses (STT/TTS) Ayarlari
+voice:
+  # Whisper model boyutu (tiny, base, small, medium, large-v3)
+  stt_model: "small"
+  # STT dili (tr = Turkce, bos = otomatik)
+  stt_language: "tr"
+  # Whisper compute type (int8 = hizli+az RAM, float16 = GPU)
+  stt_compute_type: "int8"
+  # TTS konusma hizi (kelime/dakika)
+  tts_rate: 180
