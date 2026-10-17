@@ -2,7 +2,7 @@
 Uzun süreli hafıza deposu.
 
 Kullanıcı ve konuşmalar hakkındaki kalıcı gerçekleri saklar.
-Örnek: "Kullanıcının adı Bünyamin", "Python'u tercih ediyor".
+Örnek: "Kullanıcının adı Ahmet", "Python'u tercih ediyor".
 
 Neden FAISS yerine SQLite + numpy?
 - Hafızalar az sayıda olur (yüzlerce), belge parçaları gibi binlerce değil.

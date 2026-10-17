@@ -65,7 +65,7 @@ def _apply_windows_icon(title: str) -> None:
         # Görev çubuğunda ayrı gruplansın diye kendi uygulama kimliği
         try:
             ctypes.windll.shell32.SetCurrentProcessExplicitAppUserModelID(
-                "bunyaminavc.localaiassistant"
+                "localaiassistant.desktop"
             )
         except Exception:
             pass
