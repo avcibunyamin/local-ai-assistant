@@ -146,7 +146,7 @@ class BenimAracim(Tool):
 ### 1. Projeyi Klonla
 
 ```bash
-git clone https://github.com/bunyaminavc/local-ai-assistant.git
+git clone https://github.com/avcibunyamin/local-ai-assistant.git
 cd local-ai-assistant
 ```
 
